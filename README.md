@@ -1,6 +1,7 @@
 # Reading List
 
 # Ideas
+- Reading sources
 - Store a link and give it a title
 - Prioritize the links
 - Categorize
