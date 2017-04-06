@@ -2,6 +2,7 @@
 
 # Ideas
 - Reading sources
+- Online courses, videos and tutorials
 - Store a link and give it a title
 - Prioritize the links
 - Categorize
