@@ -1,7 +1,7 @@
 # Reading List
 
 # Ideas
-- Cool reusable tools
+- Tooling radar (research, adopt, describe)
 - Cheat sheets database (Which command did I use to fix this problem anyway?)
 - Reading sources
 - Online courses, videos and tutorials
