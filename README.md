@@ -13,3 +13,6 @@
 - Store them forever (even the ones that were read)
 - Search of links (by title, domain, category, etc)
 - Learning objectives/trails
+
+# Tech debts
+- Start servers with PM2 separately
