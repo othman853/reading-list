@@ -1,3 +1,5 @@
+const axios = require('axios');
+
 const button = document.querySelector('#get-data');
 const serverData = document.querySelector('#server-data');
 
