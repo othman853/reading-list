@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 
-const ASSETS_PATH = path.join(__dirname, 'app', 'client', 'public', 'js');
+const ASSETS_PATH = path.join(__dirname, '..', 'app', 'client', 'public', 'js');
 
 module.exports = {
 
@@ -9,6 +9,12 @@ module.exports = {
   output: {
     path: ASSETS_PATH,
     filename: 'dist.js'
+  },
+  module: {
+    rules: [{
+      test: /\.vue$/,
+      loader: 'vue-loader'
+    }]
   },
   plugins: [
     new webpack.DefinePlugin({

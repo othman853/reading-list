@@ -1,7 +1,14 @@
-const axios = require('axios');
+import Vue from 'vue';
+import axios from 'axios';
+import Main from './Main.vue';
 
 const button = document.querySelector('#get-data');
 const serverData = document.querySelector('#server-data');
+
+new Vue({
+  el: "#main-wrapper",
+  render: handler => handler(Main)
+});
 
 button.addEventListener('click', () => {
 

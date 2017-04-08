@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:client": "./node_modules/.bin/webpack --config webpack.client.config.js",
+    "build:client": "./node_modules/.bin/webpack --config ./build/webpack.client.config.js",
     "test:unit": "ava -v test/unit",
     "start:server": "node ./app/index.js --application=server",
     "start:client": "node ./app/index.js --application=client"
@@ -19,7 +19,6 @@
     "got": "^6.7.1",
     "mongorito": "^2.2.0",
     "pm2": "^2.4.4",
-    "supertest": "^3.0.0",
     "value-box": "^0.12.0",
     "vue": "^2.2.6",
     "winston": "^2.3.1",
@@ -27,6 +26,9 @@
   },
   "devDependencies": {
     "ava": "^0.19.0",
+    "css-loader": "^0.28.0",
+    "vue-loader": "^11.3.4",
+    "vue-template-compiler": "^2.2.6",
     "webpack": "^2.3.3"
   }
 }
