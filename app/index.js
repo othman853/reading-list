@@ -1,14 +1,13 @@
 require('value-box/path')(__dirname, ['/values']);
 const { settings } = require('value-box');
 
-const server = require('./server');
-const client = require('./client');
+const args = require('yargs')
+  .alias('a', 'application')
+  .demandOption(['a'])
+  .argv;
 
-const log = (app, port) => console.log(`${app} up on ${port}`);
+const app = require(`./${args.application}`);
 
-server.listen(settings.server.port, () => {
+const port = settings[args.application].port;
 
-  log('Server', settings.server.port);
-
-  client.listen(settings.client.port, () => log('Client', settings.client.port));
-});
+app.listen(port, () => console.log(`Up on ${port}`));

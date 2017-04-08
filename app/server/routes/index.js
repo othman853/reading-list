@@ -1,1 +1,3 @@
-module.exports = (request, response, next) => response.sendStatus(200);
+module.exports = (request, response, next) => response.json({
+  message: 'Hello, this is server'
+});
