@@ -6,8 +6,8 @@
   "scripts": {
     "build:client": "./node_modules/.bin/webpack --config ./build/webpack.client.config.js",
     "test:unit": "ava -v test/unit",
-    "start:server": "node ./app/index.js --application=server",
-    "start:client": "node ./app/index.js --application=client"
+    "start:server": "./node_modules/.bin/nodemon ./app/index.js --application=server",
+    "start:client": "./node_modules/.bin/nodemon ./app/index.js --application=client"
   },
   "author": "",
   "license": "ISC",
@@ -27,6 +27,7 @@
   "devDependencies": {
     "ava": "^0.19.0",
     "css-loader": "^0.28.0",
+    "nodemon": "^1.11.0",
     "vue-loader": "^11.3.4",
     "vue-template-compiler": "^2.2.6",
     "webpack": "^2.3.3"
