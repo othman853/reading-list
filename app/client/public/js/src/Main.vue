@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class>
+  <div>
     <h1>Reading List</h1>
     <paragraph></paragraph>
     <serverData></serverData>

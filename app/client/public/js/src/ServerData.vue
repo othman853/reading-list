@@ -1,6 +1,6 @@
 <template lang="html">
 
-  <div class>
+  <div>
     <button v-on:click="ping" class="btn btn-primary"> Get Server Data </button>
     <button v-on:click="clear" class="btn btn-default"> Clear </button>
 
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'
 
 export default {
   data: () => ({ messages: [], errors: [] }),
