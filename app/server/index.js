@@ -1,11 +1,11 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+const express = require('express')
+const bodyParser = require('body-parser')
 
-const routes = require('./routes');
+const routes = require('./routes')
 
-const server = express();
+const server = express()
 
-server.use(bodyParser.json());
-server.get('/', routes);
+server.use(bodyParser.json())
+server.get('/', routes)
 
-module.exports = server;
+module.exports = server
