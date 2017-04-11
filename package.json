@@ -7,8 +7,9 @@
     "build:client": "./node_modules/.bin/webpack --config ./build/webpack.client.config.js",
     "test:unit": "ava -v test/unit",
     "start:db": " docker run -d -p 27017:27017 --name reading-list-db mongo:3.3.9",
-    "start:server": "./node_modules/.bin/nodemon ./app/index.js --application=server",
-    "start:client": "./node_modules/.bin/nodemon ./app/index.js --application=client"
+    "start:server": "./node_modules/.bin/nodemon --config nodemon.server.json ./app/index.js --application=server",
+    "start:client": "./node_modules/.bin/nodemon --config nodemon.client.json ./app/index.js --application=client"
+
   },
   "author": "",
   "license": "ISC",
