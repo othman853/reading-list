@@ -1,20 +1,14 @@
 <template lang="html">
 
   <div>
-    <button v-on:click="ping" class="btn btn-primary"> Get Server Data </button>
-    <button v-on:click="clear" class="btn btn-default"> Clear </button>
+    <button v-on:click="refresh" class="glyphicon glyphicon-refresh"> </button>
 
     <h4>Resources</h4>
 
     <ol>
-      <li v-for="resource in resources"> <a :href="resource.source">{{ resource.title }}</a></li>
+      <li v-for="resource in resources"> <a target="_blank" :href="resource.source">{{ resource.title }}</a></li>
     </ol>
 
-    <h4>Errors</h4>
-
-    <ol>
-      <li v-for="error in errors" class="red-text">{{ error }}</li>
-    </ol>
   </div>
 
 </template>
@@ -22,28 +16,23 @@
 <script>
 import resourcesService from './services/resources'
 
+const fetch = context => resourcesService.getResources()
+  .then(response => {
+    context.resources = response.data
+  })
+  .catch(error => context.errors.push(error))
+
 export default {
   data: () => ({ resources: [], errors: [] }),
+  mounted() {
+    fetch(this)
+  },
   methods: {
-
-    clear() {
-      this.resources = [];
-      this.errors = [];
-    },
-
-    ping() {
-      resourcesService.getResources()
-        .then(response => {
-          this.resources = this.resources.concat(response.data);
-        })
-        .catch(error => this.errors.push(error));
-    }
+    refresh: () => fetch(this)
   }
 }
 </script>
 
 <style lang="css">
-.red-text {
-  color: #C92D2D;
-}
+
 </style>
