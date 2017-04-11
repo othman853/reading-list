@@ -1,17 +1,21 @@
 const it = require('ava')
 const sinon = require('sinon')
 
-const routes = require('../../../../app/server/routes')
+const routes = require('../../../../app/server/routes/resources')
 
 const request = {}
 
 it('Returns the message on GET', t => {
 
   const response = { json: sinon.stub() }
+  const expectedResponse = [
+    { title: 'A trip to Germany', source: 'maps.google.com' },
+    { title: 'An airplane', source: 'latam.com' }
+  ]
 
   routes.get(request, response)
 
-  t.true(response.json.calledWith({ message: 'Hello, this is server' }))
+  t.true(response.json.calledWith(expectedResponse))
 })
 
 it('Creates something on POST', t => {

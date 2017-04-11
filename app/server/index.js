@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const express = require('express')
 const bodyParser = require('body-parser')
 
-const routes = require('./routes')
+const routes = require('./routes/resources')
 
 const willLog = message => console.log.bind(console, message)
 
@@ -11,7 +11,7 @@ const server = express()
 
 server.use(bodyParser.json())
 
-server.get('/', routes.get)
+server.get('/resources', routes.get)
 server.post('/resource', routes.post)
 
 server.use((req, res, next) =>
