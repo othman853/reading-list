@@ -11,6 +11,7 @@
 
 ### MVP 2: Expand supported resources
 - Reading resources:
+  - Timestamp
   - Read: did I read it already?
 - Research topics:
   - Sources: A list of harvested resources
@@ -29,9 +30,14 @@
 - Store them forever (even the ones that were read)
 - Search of links (by title, domain, category, etc)
 - Extract metadata on source paste
+- Metrics of usage (E.g.: You read x articles this week/month/day)
 
 ## Tech debts
-- Learn how to use babel to process front end JS.
-- Start servers with PM2 or Docker compose
+- Logs
 - Test Vue
 - ~~Stop using CDNs and learn how to serve static libs that come from npm.~~ (done)
+
+## Improvements
+- Animations and feedback
+- Learn how to use babel to process front end JS.
+- Start servers with PM2 or Docker compose
