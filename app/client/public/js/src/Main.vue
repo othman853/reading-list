@@ -1,6 +1,7 @@
 <template lang="html">
 
   <div>
+    <navbar></navbar>
     <div class="container">
       <resources></resources>
     </div>
@@ -9,9 +10,10 @@
 
 <script>
 import resources from './Resources.vue'
+import navbar from './Navbar.vue'
 
 export default {
-  components: { resources }
+  components: { navbar, resources }
 }
 </script>
 
