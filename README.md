@@ -17,4 +17,4 @@
 # Tech debts
 - Learn how to use babel to process front end JS.
 - Start servers with PM2 or Docker compose
-- Stop using CDNs and learn how to serve static libs that come from npm. (done)
+- ~~Stop using CDNs and learn how to serve static libs that come from npm.~~ (done)
