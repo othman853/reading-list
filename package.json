@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:client": "./node_modules/.bin/webpack --config ./build/webpack.client.config.js",
     "test:unit": "ava -v test/unit",
-    "start:db": " docker run -d -p 27017:27017 --name reading-list-db mongo:3.3.9",
-    "start:server": "./node_modules/.bin/nodemon --config nodemon.server.json ./app/index.js --application=server",
-    "start:client": "./node_modules/.bin/nodemon --config nodemon.client.json ./app/index.js --application=client"
-
+    "test:unit:watch": "ava --watch -v test/unit",
+    "db:start": " docker start reading-list-db",
+    "db:stop": "docker stop reading-list-db",
+    "client:build": "./node_modules/.bin/webpack --config ./build/webpack.client.config.js",
+    "client:start": "./node_modules/.bin/nodemon --config nodemon.client.json ./app/index.js --application=client",
+    "server:start": "./node_modules/.bin/nodemon --config nodemon.server.json ./app/index.js --application=server"
   },
   "author": "",
   "license": "ISC",
@@ -18,9 +19,7 @@
     "body-parser": "^1.17.1",
     "ejs": "^2.5.6",
     "express": "^4.15.2",
-    "got": "^6.7.1",
     "mongoose": "^4.9.4",
-    "pm2": "^2.4.4",
     "value-box": "^0.12.0",
     "vue": "^2.2.6",
     "winston": "^2.3.1",
@@ -30,6 +29,7 @@
     "ava": "^0.19.0",
     "css-loader": "^0.28.0",
     "nodemon": "^1.11.0",
+    "sinon": "^2.1.0",
     "vue-loader": "^11.3.4",
     "vue-template-compiler": "^2.2.6",
     "webpack": "^2.3.3"

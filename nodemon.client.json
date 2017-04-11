@@ -1,6 +1,6 @@
 {
   "ignore": ["app/client/public/js/dist.js", "app/server"],
   "events": {
-    "restart": "npm run build:client"
+    "restart": "npm run client:build"
   }
 }
