@@ -32,10 +32,9 @@ export default {
     },
 
     ping() {
-      const instance = this;
-      axios.get('/motd')
-        .then(response => instance.messages.push(response.data.message))
-        .catch(error => instance.errors.push(error));
+      axios.get('/motd', { timeout: 2000 })
+        .then(response => this.messages.push(response.data.message))
+        .catch(error => this.errors.push(error));
     }
   }
 }
