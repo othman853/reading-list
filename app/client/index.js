@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const got = require('got');
+const axios = require('axios');
 const path = require('path');
 const { settings } = require('value-box');
 
@@ -13,8 +13,11 @@ server.use(express.static(path.join(__dirname, 'public')));
 server.set('view engine', 'ejs');
 
 server.get('/motd', (req, res) => {
-  got(`http://localhost:${settings.server.port}/`)
-    .then(response => res.json(JSON.parse(response.body)))
+  console.log('Rq => /resources');
+  axios.get(`http://localhost:${settings.server.port}/resources`)
+    .then(response => {
+      return res.json(response.data);
+    })
     .catch(error => res.send(error));
 });
 

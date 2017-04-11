@@ -4,10 +4,10 @@
     <button v-on:click="ping" class="btn btn-primary"> Get Server Data </button>
     <button v-on:click="clear" class="btn btn-default"> Clear </button>
 
-    <h4>Messages</h4>
+    <h4>Resources</h4>
 
     <ol>
-      <li v-for="message in messages">{{ message }}</li>
+      <li v-for="resource in resources"> <a :href="resource.source">{{ resource.title }}</a></li>
     </ol>
 
     <h4>Errors</h4>
@@ -20,20 +20,22 @@
 </template>
 
 <script>
-import axios from 'axios'
+import resourcesService from './services/resources'
 
 export default {
-  data: () => ({ messages: [], errors: [] }),
+  data: () => ({ resources: [], errors: [] }),
   methods: {
 
     clear() {
-      this.messages = [];
+      this.resources = [];
       this.errors = [];
     },
 
     ping() {
-      axios.get('/motd', { timeout: 2000 })
-        .then(response => this.messages.push(response.data.message))
+      resourcesService.getResources()
+        .then(response => {
+          this.resources = this.resources.concat(response.data);
+        })
         .catch(error => this.errors.push(error));
     }
   }

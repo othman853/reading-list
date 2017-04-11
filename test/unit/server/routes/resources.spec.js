@@ -9,8 +9,8 @@ it('Returns the message on GET', t => {
 
   const response = { json: sinon.stub() }
   const expectedResponse = [
-    { title: 'A trip to Germany', source: 'maps.google.com' },
-    { title: 'An airplane', source: 'latam.com' }
+    { title: 'A trip to Germany', source: 'http://maps.google.com' },
+    { title: 'An airplane', source: 'http://latam.com' }
   ]
 
   routes.get(request, response)

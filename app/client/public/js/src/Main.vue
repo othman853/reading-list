@@ -2,16 +2,16 @@
   <div>
     <h1>Reading List</h1>
     <paragraph></paragraph>
-    <serverData></serverData>
+    <resources></resources>
   </div>
 </template>
 
 <script>
 import paragraph from './Paragraph.vue'
-import serverData from './ServerData.vue'
+import resources from './Resources.vue'
 
 export default {
-  components: { paragraph, serverData }
+  components: { paragraph, resources }
 }
 </script>
 
