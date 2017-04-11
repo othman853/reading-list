@@ -31,9 +31,12 @@
 - Search of links (by title, domain, category, etc)
 - Extract metadata on source paste
 - Metrics of usage (E.g.: You read x articles this week/month/day)
+- Feed of news around the world (realtime?)
+- List of books
 
 ## Tech debts
 - Logs
+- Use Bulma from NPM instead of CDN
 - Test Vue
 - ~~Stop using CDNs and learn how to serve static libs that come from npm.~~ (done)
 
@@ -41,3 +44,6 @@
 - Animations and feedback
 - Learn how to use babel to process front end JS.
 - Start servers with PM2 or Docker compose
+
+## Validations
+- Sockets over REST
