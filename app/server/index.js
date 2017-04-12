@@ -11,8 +11,7 @@ const server = express()
 
 server.use(bodyParser.json())
 
-server.get('/resources', routes.get)
-server.post('/resource', routes.post)
+server.use('/', routes)
 
 server.use((req, res, next) =>
   res.status(404).json({ message: 'Route not found' })
@@ -22,16 +21,10 @@ mongoose.Promise = global.Promise
 
 mongoose.connect(settings.database.url)
 
-mongoose.connection.on('connected',
-  willLog('Mongo Up')
-)
+mongoose.connection.on('connected', willLog('Mongo Up'))
 
-mongoose.connection.on('error',
-  willLog('Mongo Error')
-)
+mongoose.connection.on('error', willLog('Mongo Error'))
 
-mongoose.connection.on('disconnected',
-  willLog('Mongo down')
-)
+mongoose.connection.on('disconnected', willLog('Mongo down'))
 
 module.exports = server
