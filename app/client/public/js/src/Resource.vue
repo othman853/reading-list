@@ -3,7 +3,7 @@
   <div class="column is-one-third">
     <div class="card">
       <div class="card-content">
-        <p class="title is-uppercased"> {{ title }} </p>
+        <p class="title"> {{ title }} </p>
         <p class="subtitle"> 11:09 PM - 1 Jan 2016 </p>
         <span v-for="tag in tags" class="tag has-no-border-radius is-black">
           {{ tag }}
@@ -22,13 +22,10 @@
 </template>
 
 <script>
-export default { props: ['title', 'sizeClass', 'tags'] }
+export default { props: ['title', 'tags'] }
 </script>
 
 <style lang="css">
-.is-uppercased {
-  /*text-transform: uppercase;*/
-}
 
 .has-margin-right-5 {
   margin-right: 5px;

@@ -1,9 +1,7 @@
-import axios from 'axios'
+import Vue from 'vue'
 
 export default {
-  getResources: () => new Promise((resolve, reject) => {
-    axios.get('/motd')
-      .then(resolve)
-      .catch(reject)
-  })
+  get: () => new Promise(
+    (resolve, reject) => Vue.http.get('/resources').then(resolve, reject)
+  )
 }

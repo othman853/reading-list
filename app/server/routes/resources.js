@@ -25,7 +25,7 @@ module.exports = {
       title: 'Useful mental models',
       source: 'https://getpocket.com/a/read/1341799552',
       tags: ['Self Improvement']
-    },
+    }
   ]),
 
   post: (request, response, next) => response.sendStatus(201)

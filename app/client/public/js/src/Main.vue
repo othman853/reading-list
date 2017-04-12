@@ -1,8 +1,9 @@
 <template lang="html">
-
   <div>
-    <navbar />
+    <navigationBar />
+
     <div class="container">
+      <errorBar />
       <resources />
     </div>
   </div>
@@ -10,10 +11,11 @@
 
 <script>
 import resources from './Resources.vue'
-import navbar from './Navbar.vue'
+import navigationBar from './NavigationBar.vue'
+import errorBar from './ErrorBar.vue'
 
 export default {
-  components: { navbar, resources }
+  components: { navigationBar, errorBar, resources }
 }
 </script>
 
