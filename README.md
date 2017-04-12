@@ -61,3 +61,9 @@
 - The basics of Vue.js
 - The basics of Vuex
 - The basics of Bulma
+
+## Notable Impacts
+
+**What are most of my resources about?**
+
+During the development of MVP1 the UI and the tags made clear how my readings were categorized. I realized that I'm reading a lot about self improvement (and I didn't realize it before). This will impact a lot in the way I choose what to read and how I prioritize my reading.
