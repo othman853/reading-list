@@ -1,22 +1,16 @@
-<template lang="html">
+<template lang="jade">
+div(class="has-margin-top-20")
+  div(class="columns")
+    div(class="column is-11")
+      button(@click="fetchResources" class="button fa fa-refresh is-black")
 
-  <div class="has-margin-top-20">
-    <div class="columns">
-      <div class="column is-11">
-        <button @click="fetchResources" class="button fa fa-refresh is-black"> </button>
-      </div>
-    </div>
-
-    <div class="columns is-multiline">
-      <resource
+    div(class="columns is-multiline")
+      resource(
         v-for="resource in $store.state.resources"
         v-bind:key="resource"
         v-bind:title="resource.title"
-        v-bind:tags="resource.tags">
-      </resource>
-    </div>
-  </div>
-
+        v-bind:tags="resource.tags"
+      )
 </template>
 
 <script>

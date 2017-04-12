@@ -1,24 +1,21 @@
-<template lang="html">
+<template lang="jade">
 
-  <div class="column is-one-third">
-    <div class="card">
-      <div class="card-content">
-        <p class="title"> {{ title }} </p>
-        <p class="subtitle"> 11:09 PM - 1 Jan 2016 </p>
-        <span v-for="tag in tags" class="tag has-no-border-radius is-black">
-          {{ tag }}
-        </span>
-      </div>
-      <footer class="card-footer">
-        <p class="card-footer-item is-clickable paint-on-hover">
-          <span class="icon"> <i class="fa fa-check"></i> </span>
-        </p>
-        <p class="card-footer-item is-clickable paint-on-hover">
-          <span class="icon"> <i class="fa fa-pencil"></i> </span>
-        </p>
-      </footer>
-    </div>
-  </div>
+div(class="column is-one-third")
+  div(class="card")
+    div(class="card-content")
+      p(class="title") {{ title }}
+      p(class="subtitle") 11:09 PM - 1 Jan 2016
+      span(v-for="tag in tags" class="tag has-no-border-radius is-black") {{ tag }}
+
+    footer(class="card-footer")
+      p(class="card-footer-item is-clickable paint-on-hover")
+        span(class="icon")
+          i(class="fa fa-check")
+
+      p(class="card-footer-item is-clickable paint-on-hover")
+        span(class="icon")
+          i(class="fa fa-pencil")
+
 </template>
 
 <script>

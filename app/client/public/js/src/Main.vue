@@ -1,12 +1,9 @@
-<template lang="html">
-  <div>
-    <navigationBar />
-
-    <div class="container">
-      <errorBar />
-      <resources />
-    </div>
-  </div>
+<template lang="jade">
+  div
+    navigationBar
+    div(class="container")
+      errorBar
+      resources
 </template>
 
 <script>
@@ -18,7 +15,3 @@ export default {
   components: { navigationBar, errorBar, resources }
 }
 </script>
-
-<style lang="css">
-
-</style>
