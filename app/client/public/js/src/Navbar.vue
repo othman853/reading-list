@@ -2,13 +2,10 @@
   <nav class="nav">
 
     <div class="nav-left">
-      <a class="nav-item">
-        <img src="/images/icon.png" alt="Bulma logo">
-      </a>
+      <a class="nav-item"> Reading List </a>
     </div>
 
     <div class="nav-center">
-      <h3 class="title">Reading List</h3>
     </div>
 
     <span class="nav-toggle">
