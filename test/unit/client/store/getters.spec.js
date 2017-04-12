@@ -8,6 +8,6 @@ it('Gets the resources list', t => {
 
   const resources = getters.resources(state)
 
-  t.equal(state.resources, resources)
+  t.is(state.resources, [resources])
 
 })
