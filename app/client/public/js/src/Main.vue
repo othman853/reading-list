@@ -1,9 +1,9 @@
 <template lang="html">
 
   <div>
-    <navbar></navbar>
+    <navbar />
     <div class="container">
-      <resources></resources>
+      <resources />
     </div>
   </div>
 </template>
