@@ -9,11 +9,13 @@
 - Research topics:
   - Title: Short description about the topic
 
-### MVP 2: Expand supported resources
+### MVP 2: Expand supported resources and operations
 - Reading resources:
+  - Save a new resource
   - Timestamp
-  - Read: did I read it already?
+  - Is Read: did I read it already?
 - Research topics:
+  - Save a new research topic
   - Sources: A list of harvested resources
   - Is it really important?: A flag to decide whether I should proceed researching about this topic or not
 - Videos
@@ -21,6 +23,7 @@
 ### MVP 3: Features to help organize collected resources
 - Prioritization of resources
 - Categorization of resources
+- Filters and sorting
 - Search of resources by source or title
 
 ### Not yet prioritized:
@@ -38,6 +41,7 @@
 - Logs
 - Use Bulma from NPM instead of CDN
 - Test Vue
+- Adopt a linter
 - ~~Stop using CDNs and learn how to serve static libs that come from npm.~~ (done)
 
 ## Improvements
@@ -47,3 +51,13 @@
 
 ## Validations
 - Sockets over REST
+- Mongo DB Backups
+- Using Bulma doesn't feel so right, perhaps there might be another approach when using web components
+- Vue transition wrapper
+- Emmit and treat events inside Vue (how to show error flashes?)
+
+## Learnings
+- The basics of webpack
+- The basics of Vue.js
+- The basics of Vuex
+- The basics of Bulma
