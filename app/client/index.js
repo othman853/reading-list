@@ -12,7 +12,7 @@ server.set('views', path.join(__dirname, 'views' ))
 server.use(express.static(path.join(__dirname, 'public')))
 server.set('view engine', 'ejs')
 
-server.get('/motd', (req, res) => {
+server.get('/resources', (req, res) => {
   console.log('GET /resources')
   axios.get(`http://localhost:${settings.server.port}/resources`)
     .then(response => {
