@@ -1,6 +1,6 @@
 <template lang="jade">
 
-nav(class="nav")
+nav(id="navbar" class="nav")
   div(class="nav-left")
     a(class="nav-item") Reading List
 

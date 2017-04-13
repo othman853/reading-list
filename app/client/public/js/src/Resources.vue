@@ -1,8 +1,9 @@
 <template lang="jade">
-div(class="has-margin-top-20")
+div(id="resources" class="has-margin-top-20")
   div(class="columns")
     div(class="column is-11")
-      button(@click="fetchResources" class="button fa fa-refresh is-black")
+      button(@click="fetchResources" class="button is-black" id="resources-refresh-button")
+        span(class="fa fa-refresh rotates-on-hover")
 
   div(class="columns is-multiline")
     resource(
@@ -28,5 +29,10 @@ export default {
 <style lang="css">
 .has-margin-top-20 {
   margin-top: 20px;
+}
+
+#resources-refresh-button:hover  span.fa-refresh {
+  transform: rotate(360deg);
+  transition: 0.4s;
 }
 </style>
