@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
 const {assign} = Object
 
@@ -15,4 +15,4 @@ const schema = assign({}, attributes, options)
 
 const Resource = mongoose.Schema(schema)
 
-module.exports = mongoose.model('resources', Resource)
+export default mongoose.model('resources', Resource)

@@ -1,4 +1,4 @@
-const {Router} = require('express')
+import {Router} from 'express'
 
 const stubData = [
   {
@@ -38,4 +38,4 @@ router.route('/resources')
     return response.sendStatus(201)
   })
 
-module.exports = router
+export default router

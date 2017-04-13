@@ -1,17 +1,3 @@
-const path = require('path')
-const express = require('express')
-const bodyParser = require('body-parser')
-const resourcesRoutes = require('./bff/routes/resources')
-const server = express()
+import server from './bff'
 
-server.use(bodyParser.json())
-
-server.set('views', path.join(__dirname, 'static'))
-server.use(express.static(path.join(__dirname, 'static', 'public')))
-server.set('view engine', 'jade')
-
-server.use('/', resourcesRoutes)
-
-server.get('/', (_, res) => res.render('index.jade'))
-
-module.exports = server
+server.listen(3000, () => 'BFF Up on 3000')

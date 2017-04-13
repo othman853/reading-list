@@ -1,19 +1,8 @@
-const {settings} = require('value-box')
-const mongoose = require('mongoose')
-const express = require('express')
-const bodyParser = require('body-parser')
-
-const routes = require('./routes/resources')
+import settings from './settings.js'
+import mongoose from 'mongoose'
+import server from './server'
 
 const willLog = message => console.log.bind(console, message)
-
-const server = express()
-
-server.use(bodyParser.json())
-
-server.use('/', routes)
-
-server.use((req, res) => res.status(404).json({message: 'Route not found'}))
 
 mongoose.Promise = global.Promise
 
@@ -25,4 +14,7 @@ mongoose.connection.on('error', willLog('Mongo Error'))
 
 mongoose.connection.on('disconnected', willLog('Mongo down'))
 
-module.exports = server
+server.listen(
+  settings.server.port,
+  () => console.log(`Up on ${settings.server.port}`)
+)

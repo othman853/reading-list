@@ -9,9 +9,10 @@
     "db:start": " docker start reading-list-db",
     "db:stop": "docker stop reading-list-db",
     "client:build": "./node_modules/.bin/webpack --config ./build/webpack.client.config.js",
-    "client:start": "./node_modules/.bin/nodemon --config nodemon.client.json ./app/index.js --application=client",
-    "server:build": "babel app/server -d dist",
-    "server:start": "./node_modules/.bin/nodemon --config nodemon.server.json ./app/index.js --application=server",
+    "client:build:bff": "babel app/client -d dist/client",
+    "client:start": "./node_modules/.bin/nodemon --config nodemon.client.json ./dist/client/index.js",
+    "server:build": "babel app/server -d dist/server",
+    "server:start": "./node_modules/.bin/nodemon --config nodemon.server.json ./dist/server/index.js",
     "test": "xo"
   },
   "author": "",
