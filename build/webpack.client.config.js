@@ -2,8 +2,8 @@ const path = require('path')
 const webpack = require('webpack')
 
 const paths = {
-  statics: path.join(__dirname, '..', 'app', 'client', 'static', 'js'),
-  components: path.join(__dirname, '..', 'app', 'client', 'components')
+  statics: path.join(__dirname, '..', 'dist', 'client', 'static', 'js'),
+  components: path.join(__dirname, '..', 'app', 'client', 'components'),
 }
 
 module.exports = {

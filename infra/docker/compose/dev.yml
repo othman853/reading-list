@@ -1,0 +1,20 @@
+version: '2'
+services:
+  mongo:
+    image: "mongo:latest"
+    container_name: "reading-list-db"
+  client:
+    build:
+      context: ../../../
+      dockerfile: ./infra/docker/images/client.docker
+    ports:
+      - "3000:3000"
+    container_name: "reading-list-client"
+    command: [node, index.js]
+  server:
+    build:
+      context: ../../../
+      dockerfile: ./infra/docker/images/server.docker
+    ports:
+      - "3000:3000"
+    container_name: "reading-list-server"

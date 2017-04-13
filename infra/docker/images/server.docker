@@ -1,0 +1,5 @@
+FROM node:latest
+RUN mkdir -p /usr/app
+WORKDIR /usr/app
+ADD ./dist/server /usr/app
+ADD node_modules /usr/app/node_modules

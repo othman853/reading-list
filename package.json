@@ -6,13 +6,12 @@
   "scripts": {
     "test:unit": "ava -v test/unit",
     "test:unit:watch": "ava --watch -v test/unit",
-    "db:start": " docker start reading-list-db",
+    "db:start": "docker start reading-list-db",
     "db:stop": "docker stop reading-list-db",
-    "client:build": "./node_modules/.bin/webpack --config ./build/webpack.client.config.js",
-    "client:build:bff": "babel app/client -d dist/client",
-    "client:start": "./node_modules/.bin/nodemon --config nodemon.client.json ./dist/client/index.js",
+    "client:build": "babel app/client -d dist/client && webpack --config ./build/webpack.client.config.js",
+    "client:start": "npm run client:build && nodemon --config nodemon.client.json ./dist/client/index.js",
     "server:build": "babel app/server -d dist/server",
-    "server:start": "./node_modules/.bin/nodemon --config nodemon.server.json ./dist/server/index.js",
+    "server:start": "npm run server:build && nodemon --config nodemon.server.json ./dist/server/index.js",
     "test": "xo"
   },
   "author": "",

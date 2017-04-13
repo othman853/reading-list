@@ -1,3 +1,6 @@
 {
-  "ignore": "app/client/"
+  "ignore": ["app/client/", "dist/"],
+  "events": {
+    "restart": "npm run server:build"
+  }
 }
