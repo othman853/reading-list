@@ -1,13 +1,16 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require('path')
+const webpack = require('webpack')
 
-const ASSETS_PATH = path.join(__dirname, '..', 'app', 'client', 'public', 'js');
+const paths = {
+  statics: path.join(__dirname, '..', 'app', 'client', 'static', 'js'),
+  components: path.join(__dirname, '..', 'app', 'client', 'components')
+}
 
 module.exports = {
 
-  entry: path.join(ASSETS_PATH, 'src', 'main.js'),
+  entry: path.join(paths.components, 'main.js'),
   output: {
-    path: ASSETS_PATH,
+    path: paths.statics,
     filename: 'dist.js'
   },
   module: {
@@ -24,4 +27,4 @@ module.exports = {
     })
   ]
 
-};
+}
