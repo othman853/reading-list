@@ -42,18 +42,14 @@
 - Use Bulma from NPM instead of CDN
 - Test Vue
 - Adopt a linter
-- ~~Stop using CDNs and learn how to serve static libs that come from npm.~~ (done)
 
 ## Improvements
-- Animations and feedback
-- Learn how to use babel to process front end JS.
-- Start servers with PM2 or Docker compose
+- Start servers with PM2 or Docker (compose)
 
 ## Validations
 - Sockets over REST
 - Mongo DB Backups
 - Using Bulma doesn't feel so right, perhaps there might be another approach when using web components
-- Vue transition wrapper
 - Emmit and treat events inside Vue (how to show error flashes?)
 
 ## Learnings
