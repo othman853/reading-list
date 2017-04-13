@@ -1,9 +1,10 @@
 const mongoose = require('mongoose')
-const { assign } = Object
+
+const {assign} = Object
 
 const attributes = {
-  title: { type: String },
-  source: { type: String }
+  title: {type: String},
+  source: {type: String}
 }
 
 const options = {

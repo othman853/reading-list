@@ -1,10 +1,11 @@
-const { Router } = require('express')
+const {Router} = require('express')
 const axios = require('axios')
-const { settings } = require('value-box')
+const {settings} = require('value-box')
+
 const router = Router()
 
 router.route('/resources')
-  .get((request, response, next) => {
+  .get((request, response) => {
     console.log('GET /resources')
     axios.get(`http://localhost:${settings.server.port}/resources`)
       .then(remoteResponse => {
@@ -13,7 +14,7 @@ router.route('/resources')
       })
       .catch(error => {
         const status = error.response ? error.response.status : 500
-        const body = { error, message: 'Failed to connect to remote server' }
+        const body = {error, message: 'Failed to connect to remote server'}
         return response.status(status).json(body)
       })
   })

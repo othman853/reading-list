@@ -1,5 +1,5 @@
 require('value-box/path')(__dirname, ['/values'])
-const { settings } = require('value-box')
+const {settings} = require('value-box')
 
 const args = require('yargs')
   .alias('a', 'application')

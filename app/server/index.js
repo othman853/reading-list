@@ -1,4 +1,4 @@
-const { settings } = require('value-box')
+const {settings} = require('value-box')
 const mongoose = require('mongoose')
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -13,9 +13,7 @@ server.use(bodyParser.json())
 
 server.use('/', routes)
 
-server.use((req, res, next) =>
-  res.status(404).json({ message: 'Route not found' })
-)
+server.use((req, res) => res.status(404).json({message: 'Route not found'}))
 
 mongoose.Promise = global.Promise
 

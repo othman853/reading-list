@@ -1,4 +1,4 @@
-const { Router } = require('express');
+const {Router} = require('express')
 
 const stubData = [
   {
@@ -31,10 +31,10 @@ const stubData = [
 const router = Router()
 
 router.route('/resources')
-  .get((request, response, next) => {
+  .get((request, response) => {
     return response.json(stubData)
   })
-  .post((request, response, next) => {
+  .post((request, response) => {
     return response.sendStatus(201)
   })
 

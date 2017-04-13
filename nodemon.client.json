@@ -1,8 +1,7 @@
 {
-  "ignore": ["app/client/public/js/dist.js", "app/server"],
-  "watch": "app/",
+  "ignore": ["app/client/static/js/dist.js", "app/server"],
+  "watch": ["app/client", "*.vue" ],
   "events": {
-    "start": "npm run client:build",
     "restart": "npm run client:build"
   }
 }
