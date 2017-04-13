@@ -26,34 +26,9 @@
 - Filters and sorting
 - Search of resources by source or title
 
-### Not yet prioritized:
-- Learning objectives/trails
-- Tooling radar (research, adopt, describe)
-- Cheat sheets database (Which command did I use to fix this problem anyway?)
-- Store them forever (even the ones that were read)
-- Search of links (by title, domain, category, etc)
-- Extract metadata on source paste
-- Metrics of usage (E.g.: You read x articles this week/month/day)
-- Feed of news around the world (realtime?)
-- List of books
-
-## Tech debts
-- Logs
-- Use Bulma from NPM instead of CDN
-- Test Vue
-- Adopt a linter
-
-## Improvements
-- Start servers with PM2 or Docker (compose)
-
-## Validations
-- Sockets over REST
-- Mongo DB Backups
-- Using Bulma doesn't feel so right, perhaps there might be another approach when using web components
-- Emmit and treat events inside Vue (how to show error flashes?)
-
 ## Learnings
-- The basics of webpack
+- The basics of Webpack
+- The basics of Babel
 - The basics of Vue.js
 - The basics of Vuex
 - The basics of Bulma
