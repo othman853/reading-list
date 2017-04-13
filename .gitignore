@@ -3,3 +3,4 @@ yarn-error.log
 npm-debug.log
 app/client/static/js/dist.js
 app/values/secrets.js
+dist/
