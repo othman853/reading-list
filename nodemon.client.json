@@ -1,4 +1,0 @@
-{
-  "ignore": ["app/client/static/js/dist.js", "app/server"],
-  "watch": ["dist/client", "*.vue" ]
-}
