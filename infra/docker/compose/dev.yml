@@ -16,5 +16,5 @@ services:
       context: ../../../
       dockerfile: ./infra/docker/images/server.docker
     ports:
-      - "3000:3000"
+      - "3001:3001"
     container_name: "reading-list-server"

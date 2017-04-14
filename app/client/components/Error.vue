@@ -1,9 +1,7 @@
 <template lang="jade">
 transition(name="fade")
-  div(class="notification is-danger")
+  div(class="notification is-danger") {{ message }}
     button(@click="$store.commit('removeError', this.index)" class="delete")
-    {{ message }}
-    
 </template>
 
 <script>

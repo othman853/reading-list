@@ -1,13 +1,12 @@
 const {Router} = require('express')
 const axios = require('axios')
-const {settings} = require('value-box')
 
 const router = Router()
 
 router.route('/resources')
   .get((request, response) => {
     console.log('GET /resources')
-    axios.get(`http://localhost:${settings.server.port}/resources`)
+    axios.get(`http://localhost:3001/resources`)
       .then(remoteResponse => {
         console.log('OK')
         return response.json(remoteResponse.data)

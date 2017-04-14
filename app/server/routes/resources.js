@@ -30,8 +30,6 @@ const stubData = [
 
 const router = Router()
 
-router.route('/bla').get((req, res) => res.json({ ok: true }))
-
 router.route('/resources')
   .get((request, response) => {
     return response.json(stubData)
