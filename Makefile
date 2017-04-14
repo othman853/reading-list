@@ -1,14 +1,14 @@
-watch-start:
-	bash ./build/watch-start.sh
+watchers-start:
+	bash ./build/watchers-start.sh
 
-watch-stop:
-	bash ./build/watch-stop.sh
+watchers-stop:
+	bash ./build/watchers-stop.sh
 
-watch-list:
-	bash ./build/watch-list.sh
+watchers-list:
+	bash ./build/watchers-list.sh
 
-run:watch-start
-	bash ./build/run.sh
+runners-list:
+	bash ./build/runners-list.sh
 
-stop:watch-stop
-	bash ./build/stop.sh
+runners-stop:
+	bash ./build/runners-stop.sh
