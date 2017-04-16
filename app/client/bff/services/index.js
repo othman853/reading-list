@@ -1,7 +1,6 @@
 import axios from 'axios'
-
-import resources from './resources'
 import config from '../config'
+import resources from './resources'
 
 export default {
   resources: resources(axios, config.services.resources)

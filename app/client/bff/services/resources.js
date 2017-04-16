@@ -5,4 +5,4 @@ const get = (axios, config) => () => new Promise((resolve, reject) =>
     .catch(reject)
 )
 
-export default (axios, config) => ({ get: get(axios, config) })
+export default (axios, config) => ({get: get(axios, config)})

@@ -5,13 +5,9 @@ const handleError = response => error => {
   return response.status(status).json(body)
 }
 
-export default (route) => (resourcesService) => {
-
-  route.get((request, response) => {
-    console.log('GET /resources')
-    resourcesService.get()
-      .then(remoteResponse => response.json(remoteResponse.data))
-      .catch(handleError(response))
-  })
-
-}
+export default route => resourcesService => route.get((request, response) => {
+  console.log('GET /resources')
+  resourcesService.get()
+    .then(remoteResponse => response.json(remoteResponse.data))
+    .catch(handleError(response))
+})
