@@ -2,8 +2,8 @@ const url = ({host, port}) => `http://${host}:${port}`
 
 const hosts = {
   resources: {
-    host: 'localhost',
-    port: 3001
+    host: 'server',
+    port: 3000
   }
 }
 

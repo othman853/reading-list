@@ -3,12 +3,12 @@ const client = {
 }
 
 const server = {
-  port: process.env.READING_LIST_SERVER_PORT || 3001
+  port: process.env.READING_LIST_SERVER_PORT || 3000
 }
 
 const database = {
   protocol: 'mongodb',
-  host: 'localhost',
+  host: 'db',
   port: '27017',
   name: 'reading-list',
   get url() {
