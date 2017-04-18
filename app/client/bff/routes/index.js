@@ -1,6 +1,5 @@
 import services from '../services'
 import {Router} from 'express'
-import Route from './Route'
 import resources from './resources'
 
 const router = Router()
