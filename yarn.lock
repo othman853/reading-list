@@ -3337,7 +3337,7 @@ js-types@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/js-types/-/js-types-1.0.0.tgz#d242e6494ed572ad3c92809fc8bed7f7687cbf03"
 
-js-yaml@^3.4.3, js-yaml@^3.5.1, js-yaml@^3.8.1, js-yaml@^3.8.2:
+js-yaml@^3.4.3, js-yaml@^3.5.1, js-yaml@^3.8.2:
   version "3.8.3"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.8.3.tgz#33a05ec481c850c8875929166fe1beb61c728766"
   dependencies:
@@ -5799,13 +5799,6 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "~1.0.0"
     spdx-expression-parse "~1.0.0"
-
-value-box@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/value-box/-/value-box-0.12.0.tgz#a5fdec26e8ed1f054892cf48e87e85ed5b9d6ef6"
-  dependencies:
-    camelcase "^4.0.0"
-    js-yaml "^3.8.1"
 
 vary@~1.1.0:
   version "1.1.1"
