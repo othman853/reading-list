@@ -1,0 +1,9 @@
+FROM node:latest
+RUN mkdir -p /usr/app
+WORKDIR /usr/app
+ADD ./dist/server /usr/app
+ADD ./package.json /usr/app
+ADD ./yarn.lock /usr/app
+RUN npm install -g yarn
+RUN yarn install --prod
+EXPOSE 3000
