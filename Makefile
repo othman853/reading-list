@@ -1,10 +1,10 @@
-include ./infra/Makefile.docker
+include ./infra/Makefile
 
 clean:
 	rm -rf ./dist/*
 
 build:clean
-	./node_modules/.bin/babel ./app -d ./dist/app
+	./node_modules/.bin/babel ./app -d ./dist/app --ignore ./app/client/components
 	./node_modules/.bin/webpack --config ./webpack.client.config.js
 	cp ./app/client/static/index.jade ./dist/app/client/static/index.jade
 
