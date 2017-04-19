@@ -1,0 +1,22 @@
+version: '3'
+services:
+  reading-list-babel-watch:
+    image: "reading-list-dev-watcher:master"
+    volumes:
+      - ../../../node_modules:/usr/app/node_modules
+      - ../../../app:/usr/app/app
+      - ../../../dist:/usr/app/dist
+      - ../../../.babelrc:/usr/app/.babelrc
+      - ../../../webpack.client.config.js:/usr/app/webpack.client.config.js
+    container_name: "reading-list-babel-watch"
+    command: [/usr/app/node_modules/.bin/babel, -w, /usr/app/app, --ignore, /usr/app/app/client/components, -d, /usr/app/dist/app]
+
+  reading-list-webpack-watch:
+    image: "reading-list-dev-watcher:master"
+    volumes:
+      - ../../../node_modules:/usr/app/node_modules
+      - ../../../app/client:/usr/app/app/client
+      - ../../../dist/app:/usr/app/dist/app
+      - ../../../webpack.client.config.js:/usr/app/webpack.client.config.js
+    container_name: "reading-list-webpack-watch"
+    command: [/usr/app/node_modules/.bin/webpack, -w, --config, /usr/app/webpack.client.config.js]

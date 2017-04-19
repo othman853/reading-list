@@ -1,10 +1,17 @@
-include ./infra/docker/Makefile
+include ./infra/Makefile.docker
 
-watchers-start:
-	bash ./build/watchers-start.sh
+clean:
+	rm -rf ./dist/*
 
-watchers-stop:
-	bash ./build/watchers-stop.sh
+build:clean
+	./node_modules/.bin/babel ./app -d ./dist/app
+	./node_modules/.bin/webpack --config ./webpack.client.config.js
+	cp ./app/client/static/index.jade ./dist/app/client/static/index.jade
 
-watchers-list:
-	bash ./build/watchers-list.sh
+run:build
+	docker-compose -f infra/docker/compose/development.yml up -d
+	docker-compose -f infra/docker/compose/watch.yml up -d
+
+stop:
+	docker-compose -f infra/docker/compose/development.yml stop
+	docker-compose -f infra/docker/compose/watch.yml stop

@@ -1,9 +1,7 @@
-version: '2'
+version: '3'
 services:
   db:
     image: "mongo:latest"
-    ports:
-      - "27017:27017"
     container_name: "reading-list-db-dev"
   server:
     image: "reading-list-dev-runner:master"
@@ -12,10 +10,10 @@ services:
     links:
       - db
     volumes:
-      - ../../../dist/server:/usr/app/server
       - ../../../node_modules:/usr/app/node_modules
+      - ../../../dist/app/server:/usr/app
     container_name: "reading-list-server-dev"
-    command: [nodemon, server/index.js]
+    command: [nodemon, index.js]
 
   client:
     image: "reading-list-dev-runner:master"
@@ -24,7 +22,7 @@ services:
     links:
       - server
     volumes:
-      - ../../../dist/client:/usr/app/client
       - ../../../node_modules:/usr/app/node_modules
+      - ../../../dist/app/client:/usr/app
     container_name: "reading-list-client-dev"
-    command: [nodemon, client/index.js]
+    command: [nodemon, index.js]
