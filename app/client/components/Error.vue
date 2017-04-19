@@ -8,7 +8,6 @@ transition(name="fade")
   export default { props: ['message', 'index'] }
 </script>
 
-
 <style lang="css">
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s
