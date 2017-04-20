@@ -3,8 +3,9 @@ services:
   db:
     image: "mongo:latest"
     container_name: "reading-list-db-dev"
+
   server:
-    image: "reading-list-dev-runner:master"
+    image: "reading-list-dev-runner"
     ports:
       - "3001:3000"
     links:
@@ -16,7 +17,7 @@ services:
     command: [nodemon, index.js]
 
   client:
-    image: "reading-list-dev-runner:master"
+    image: "reading-list-dev-runner"
     ports:
       - "3000:3000"
     links:

@@ -1,7 +1,7 @@
 version: '3'
 services:
   reading-list-babel-watch:
-    image: "reading-list-dev-watcher:master"
+    image: "reading-list-dev-watcher"
     volumes:
       - ../../../node_modules:/usr/app/node_modules
       - ../../../app:/usr/app/app
@@ -12,7 +12,7 @@ services:
     command: [/usr/app/node_modules/.bin/babel, -w, /usr/app/app, --ignore, /usr/app/app/client/components, -d, /usr/app/dist/app]
 
   reading-list-webpack-watch:
-    image: "reading-list-dev-watcher:master"
+    image: "reading-list-dev-watcher"
     volumes:
       - ../../../node_modules:/usr/app/node_modules
       - ../../../app/client:/usr/app/app/client

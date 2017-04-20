@@ -1,6 +1,7 @@
 DEV_RUNNER=reading-list-dev-runner
 DEV_WATCHER=reading-list-dev-watcher
-COMPOSE=docker-compose -f infra/docker/compose/development.yml
+COMPOSE_RUNNER=docker-compose -f infra/docker/compose/development.yml
+COMPOSE_WATCHER=docker-compose -f infra/docker/compose/watch.yml
 
 registry-catalog:
 	curl $(REGISTRY_HOST)/v2/_catalog
@@ -17,20 +18,29 @@ build-watcher-image:
 		-f ./infra/docker/images/watcher.dev.docker \
 		.
 
+clean-runners:
+	$(COMPOSE_RUNNER) rm
+
+list-runners:
+	$(COMPOSE_RUNNER) ps
+
+clean-watchers:
+	$(COMPOSE_WATCHER) rm
+
+list-watchers:
+	$(COMPOSE_WATCHER) ps
+
 log-server:
-	$(COMPOSE) logs -f -t server
+	$(COMPOSE_RUNNER) logs -f -t server
 
 log-client:
-	$(COMPOSE) logs -f -t client
+	$(COMPOSE_RUNNER) logs -f -t client
 
 log-db:
-	$(COMPOSE) logs db
+	$(COMPOSE_RUNNER) logs db
 
-log-webpack-client:
-	$(COMPOSE) logs -f -t webpack-client-watch
+log-webpack:
+	$(COMPOSE_WATCHER) logs -f -t reading-list-webpack-watch
 
-log-babel-client:
-	$(COMPOSE) logs -f -t babel-client-watch
-
-log-babel-server:
-	$(COMPOSE) logs -f -t babel-server-watch
+log-babel:
+	$(COMPOSE_WATCHER) logs -f -t reading-list-babel-watch

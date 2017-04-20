@@ -1,7 +1,7 @@
 FROM node:latest
 RUN mkdir -p /usr/app
 WORKDIR /usr/app
-ADD ./dist/client /usr/app
+ADD ./dist/app/client /usr/app
 ADD ./package.json /usr/app
 ADD ./yarn.lock /usr/app
 RUN npm install -g yarn
