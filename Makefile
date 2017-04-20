@@ -1,4 +1,4 @@
-include ./infra/Makefile
+include ./infra/docker/Makefile
 
 clean:
 	rm -rf ./dist/*

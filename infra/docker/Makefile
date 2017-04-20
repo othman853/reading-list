@@ -1,6 +1,9 @@
-DEV_RUNNER=reading-list-dev-runner:master
-DEV_WATCHER=reading-list-dev-watcher:master
+DEV_RUNNER=reading-list-dev-runner
+DEV_WATCHER=reading-list-dev-watcher
 COMPOSE=docker-compose -f infra/docker/compose/development.yml
+
+registry-catalog:
+	curl $(REGISTRY_HOST)/v2/_catalog
 
 build-runner-image:
 	docker build \
