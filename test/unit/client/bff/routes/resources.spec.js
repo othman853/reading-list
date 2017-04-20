@@ -6,20 +6,19 @@ const resources = require('../../../../../app/client/bff/routes/resources').defa
 const request = {}
 
 test('Registers a getter method', t => {
-  const route = { get: sinon.stub() }
-  const service = { resourcesService: { get: sinon.stub() } }
+  const route = {get: sinon.stub()}
+  const service = {resourcesService: {get: sinon.stub()}}
 
   resources(route)()
 
   t.true(route.get.called)
-
 })
 
 test.skip('Interacts with request', t => {
   let handler = null
-  const route = { get: h => handler = h }
-  const service = { get: sinon.stub() }
-  const request = { log: sinon.stub() }
+  const route = {get: h => handler = h}
+  const service = {get: sinon.stub()}
+  const request = {log: sinon.stub()}
 
   resources(route)(service)
 
